@@ -45,7 +45,7 @@ group :development do
   gem 'spring'
   gem 'haml-rails'
   gem 'erb2haml'
-  gem 'font-awesome-rai
+  gem 'font-awesome-rails'
   gem 'devise'
 end
 
