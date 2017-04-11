@@ -1,0 +1,158 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+$White: #FFFFFF;
+$SkyBlue: #38AEF0;
+$Black: #434A54;
+$Gray: #999999;
+$BlackGray: #333333;
+$LightGray: #EEEEEE;
+$Deepblue1: #2F3E51;
+$Deepblue2: #253141;
+
+@mixin clearfix() {
+   &:after {
+     content: '';
+     display: block;
+     clear: both;
+   }
+ }
+
+.notification {
+  text-align: center;
+  color: $White;
+  background-color: $SkyBlue;
+}
+
+.chat{
+  height: 100%;
+  .sidebar {
+    float: left;
+    width: 300px;
+    height: 100vh;
+    background-color: $Deepblue1;
+    &__user {
+      @include clearfix();
+      background-color: $Deepblue2;
+      color: $White;
+      padding: 42px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      &--name {
+        float: left;
+      }
+      &--btn {
+        float: right;
+      }
+    }
+    &__groups-list {
+      padding: 20px;
+      color: $White;
+      &__group {
+        &--name {
+          font-size: 15px;
+          padding-bottom: 5px;
+        }
+        &--newest-message {
+          font-size: 11px;
+          padding-bottom: 40px;
+        }
+      }
+    }
+  }
+
+  .chat-main {
+    float: left;
+    height: 100vh;
+    width: calc( 100vw - 300px );
+    position: relative;
+    &__header {
+      @include clearfix();
+      width: calc( 100vw - 300px );
+      border-bottom: 1px solid $LightGray;
+      &__left {
+        float: left;
+        &--group {
+          padding: 35px 40px 0;
+          font-size: 20px;
+          color: $BlackGray;
+        }
+        &--member {
+          padding: 15px 40px 0;
+          font-size: 12px;
+          color: $Gray;
+        }
+      }
+      &__right {
+        float: right;
+        color: $SkyBlue;
+        margin: 28px 40px;
+        border: 1px solid $SkyBlue;
+        padding: 12.5px 20px;
+      }
+    }
+
+    &__body {
+      padding: 6px 40px 0;
+      overflow-y: scroll;
+      &__message {
+        @include clearfix();
+        padding-top: 40px;
+        &--name {
+          float: left;
+          font-size: 16px;
+          font-weight: bold;
+          color: $Black;
+          padding-right: 10px;
+        }
+        &--time {
+          float: left;
+          font-size: 12px;
+          color: $Gray;
+        }
+        &--content {
+          clear: both;
+          font-size: 14px;
+          color: $Black;
+          padding-top: 10px;
+        }
+      }
+    }
+
+    &__footer {
+      position: absolute;
+      bottom: 0;
+      background-color: $Gray;
+      width: calc( 100vw - 300px );
+      height: 50px;
+      padding: 20px 0;
+      &--form {
+        float: left;
+        background-color: $White;
+        font-size: 16px;
+        color: $Gray;
+        width: calc( 100% - 225px);
+        margin-left: 40px;
+        padding: 13px 10px;
+        i {
+          float: right;
+          color: $Black;
+          padding: 4px 5px;
+        }
+      }
+      &--btn {
+        float: right;
+        background-color: $SkyBlue;
+        color: $White;
+        width: 100px;
+        margin-right: 40px;
+        text-align: center;
+        padding: 13px 0;
+      }
+    }
+  }
+}
