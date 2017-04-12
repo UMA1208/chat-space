@@ -47,5 +47,6 @@ group :development do
   gem 'erb2haml'
   gem 'font-awesome-rails'
   gem 'devise'
+  gem 'html2haml'
 end
 
