@@ -7,8 +7,9 @@
       .sidebar__user--name
         YUMA
       .sidebar__user--btn
-        %i.fa.fa-pencil-square-o
-        %i.fa.fa-cog.fa-lx
+        %a.fa.fa-pencil-square-o
+        = link_to edit_user_registration_path do
+          %i.fa.fa-cog.fa-lx 
     .sidebar__groups-list
       .sidebar__groups-list__group
         .sidebar__groups-list__group--name AAA
