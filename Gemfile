@@ -48,5 +48,7 @@ group :development do
   gem 'font-awesome-rails'
   gem 'devise'
   gem 'html2haml'
+  gem 'twitter-bootstrap-rails'
+  gem 'pry-rails'
 end
 
