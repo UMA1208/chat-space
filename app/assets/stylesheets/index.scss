@@ -12,6 +12,7 @@ $BlackGray: #333333;
 $LightGray: #EEEEEE;
 $Deepblue1: #2F3E51;
 $Deepblue2: #253141;
+$Orange: #FF6E00;
 
 @mixin clearfix() {
    &:after {
@@ -21,10 +22,16 @@ $Deepblue2: #253141;
    }
  }
 
-.notification {
-  text-align: center;
-  color: $White;
-  background-color: $SkyBlue;
+.flash-alert-notice {
+ background-color: $SkyBlue;
+ text-align: center;
+ color: $White;
+}
+
+.flash-alert-alert {
+ background-color: $Orange;
+ text-align: center;
+ color: $White;
 }
 
 .chat{
