@@ -9,5 +9,4 @@
   %body
     - flash.each do |key, value|
       = content_tag :div, value, class: "flash-alert-#{key}"
-      .flash-alert-notice チャットグループが作成されました
     = yield
