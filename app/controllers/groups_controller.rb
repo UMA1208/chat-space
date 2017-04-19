@@ -3,6 +3,9 @@ class GroupsController < ApplicationController
   def edit
   end
 
-  def create
+  def new
+  end
+
+  def save
   end
 end
