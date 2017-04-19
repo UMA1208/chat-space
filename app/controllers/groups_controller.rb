@@ -1,10 +1,11 @@
 class GroupsController < ApplicationController
 
   def new
-    @group = group.new
+    @user = current_user
+    @group = Group.new
   end
 
-  def save
+  def create
   end
 
   def edit
