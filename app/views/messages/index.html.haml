@@ -3,7 +3,7 @@
   .sidebar
     .sidebar__user
       .sidebar__user--name
-        YUMA
+        = current_user.name
       .sidebar__user--btn
         = link_to new_group_path do
           %i.fa.fa-pencil-square-o
@@ -13,12 +13,6 @@
       .sidebar__groups-list__group
         .sidebar__groups-list__group--name AAA
         .sidebar__groups-list__group--newest-message SKY-HIやばい
-      .sidebar__groups-list__group
-        .sidebar__groups-list__group--name 空手
-        .sidebar__groups-list__group--newest-message 糸東流
-      .sidebar__groups-list__group
-        .sidebar__groups-list__group--name sample
-        .sidebar__groups-list__group--newest-message まだメッセージはありません。
 
   .chat-main
     .chat-main__header

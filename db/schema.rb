@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20170419065803) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "group_name"
+    t.integer  "user_ids"
   end
 
   create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
