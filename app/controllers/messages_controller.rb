@@ -1,13 +1,23 @@
 class MessagesController < ApplicationController
 
-  before_action :move_to_log_in
   def index
     @groups = current_user.groups
-    # @group = Group.find(params[:group_id])
+    @group = Group.find(113)
+    @messages = @group.messages
+    @message = Message.new
+  end
+
+  def create
+    @message = Message.new(message_params)
+    if @message.save
+      redirect_to group_messages_path(@message.group_id), alert: 'メッセージが送信されました'
+    else
+      redirect_to group_messages_path(@message.group_id), alert: 'メッセージの送信に失敗しました'
+    end
   end
 
   private
-  def move_to_log_in
-    redirect_to new_user_session_path unless user_signed_in?
+  def message_params
+    params.require(:message).permit(:body, :image).merge(group_id: params[:group_id], user_id: current_user.id)
   end
 end
