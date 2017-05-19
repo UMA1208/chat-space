@@ -93,9 +93,6 @@ ja:
       x_months:
         one: 1ヶ月
         other: "%{count}ヶ月"
-      x_years:
-        one: 1年
-        other: "%{count}年"
       x_seconds:
         one: 1秒
         other: "%{count}秒"
@@ -193,9 +190,9 @@ ja:
         delimiter: ''
   support:
     array:
-      last_word_connector: 、
-      two_words_connector: 、
-      words_connector: 、
+      last_word_connector: と
+      two_words_connector: と
+      words_connector: と
   time:
     am: 午前
     formats:
