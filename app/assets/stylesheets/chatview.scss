@@ -5,35 +5,11 @@ html, body {
   color: white;
 }
 
-$White: #FFFFFF;
-$SkyBlue: #38AEF0;
-$Black: #434A54;
-$Gray: #999999;
-$BlackGray: #333333;
-$LightGray: #EEEEEE;
-$Deepblue1: #2F3E51;
-$Deepblue2: #253141;
-$Orange: #FF6E00;
-
-@mixin clearfix() {
-   &:after {
-     content: '';
-     display: block;
-     clear: both;
-   }
- }
-
-.flash-alert-alert {
+.flash-alert-notice {
  background-color: blue;
  text-align: center;
  color: white;
 }
-
-%i.fa.fa-picture-o {
-  color: white;
-}
-
-
 
 .chat{
   height: 100%;
@@ -41,7 +17,6 @@ $Orange: #FF6E00;
     float: left;
     width: 300px;
     height: 100vh;
-    color: white;
     background-color: $Deepblue1;
     &__user {
       @include clearfix();
@@ -56,6 +31,11 @@ $Orange: #FF6E00;
       }
       &--btn {
         float: right;
+        
+        a{
+          color: $White;
+          text-decoration-line: none;
+        }
       }
     }
     &__groups-list {
@@ -65,15 +45,16 @@ $Orange: #FF6E00;
         &--name {
           font-size: 15px;
           padding-bottom: 5px;
+          color: $White;
         }
         &--newest-message {
           font-size: 11px;
           padding-bottom: 40px;
+          color: $White;
         }
       }
     }
   }
-
 
   .chat-main {
     float: left;
@@ -87,12 +68,12 @@ $Orange: #FF6E00;
       &__left {
         float: left;
         &--group {
-          padding: 35px 40px 0;
+          padding: 35px 0 0 40px;
           font-size: 20px;
           color: $BlackGray;
         }
         &--member {
-          padding: 15px 40px 0;
+          padding: 15px 0 0 40px;
           font-size: 12px;
           color: $Gray;
         }
@@ -103,12 +84,16 @@ $Orange: #FF6E00;
         margin: 28px 40px;
         border: 1px solid $SkyBlue;
         padding: 12.5px 20px;
+        a {
+          color: $SkyBlue;
+        }
       }
     }
 
     &__body {
       padding: 6px 40px 0;
       overflow-y: scroll;
+      max-height: calc( 100vh - 198px );
       &__message {
         @include clearfix();
         padding-top: 40px;
@@ -128,7 +113,48 @@ $Orange: #FF6E00;
           clear: both;
           font-size: 14px;
           color: $Black;
-          padding-top: 10px;
+          padding: 10px 0 40px;
+        }
+      }
+    }
+
+    &__footer {
+      position: absolute;
+      bottom: 0;
+      background-color: $Gray;
+      width: calc( 100vw - 300px );
+      height: 50px;
+      padding: 20px 0;
+      &--form {
+        background-color: $White;
+        .send_form {
+          float: left;
+          font-size: 16px;
+          width: calc( 100% - 225px);
+          margin-left: 40px;
+          padding: 13px 10px;
+        i {
+          float: right;
+          color: $Black;
+          padding: 4px 5px;
+        }
+        }
+        .image {
+            position: absolute;
+            right: 175px;
+            top: 34px;
+            color: $Black;
+          }
+      }
+      &--btn {
+        .send_btn {
+          float: right;
+          background-color: $SkyBlue;
+          color: $White;
+          width: 100px;
+          margin-right: 40px;
+          text-align: center;
+          padding: 13px 0;
         }
       }
     }

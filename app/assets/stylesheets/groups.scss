@@ -6,13 +6,14 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   box-sizing: border-box;
+  color: black;
+
 
   h1 {
     letter-spacing: 2px;
     font-size: 24px;
     text-align: center;
   }
-
 
   .group-form__errors {
     margin: 30px 0;
@@ -42,6 +43,7 @@
 
   .group-form__field {
     margin-top: 30px;
+    @include clearfix();
 
     .group-form__field--left {
       float: left;
@@ -105,3 +107,7 @@
     border: 0;
   }
 }
+
+  .sidebar__groups-list__group--latest-message {
+  color: blue;
+  }
