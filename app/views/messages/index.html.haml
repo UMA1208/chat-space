@@ -28,14 +28,14 @@
         = render partial: "message", collection: @messages
 
     .chat-main__footer
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], class: 'js_send' do |f|
         .chat-main__footer--form
-          = f.text_field :body, row: '1', placeholder: "type a message", class: 'send_form'
+          = f.text_field :body, row: '1', placeholder: "type a message", class: 'js_send_form'
           = f.label :image, class: 'image' do
             %i.fa.fa-picture-o
             = f.file_field :image, style: 'display: none;'
         .chat-main__footer--btn
-          = f.submit 'Send', class: 'send_btn'
+          = f.submit 'Send', class: 'submit'
 
 
 
