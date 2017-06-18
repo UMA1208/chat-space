@@ -38,8 +38,6 @@ $Orange: #FF6E00;
 .chat{
   height: 100%;
   .sidebar {
-    float: left;
-    width: 300px;
     height: 100vh;
     color: white;
     background-color: $Deepblue1;
@@ -76,9 +74,7 @@ $Orange: #FF6E00;
 
 
   .chat-main {
-    float: left;
     height: 100vh;
-    width: calc( 100vw - 300px );
     position: relative;
     &__header {
       @include clearfix();
