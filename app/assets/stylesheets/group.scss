@@ -56,6 +56,19 @@
     .group-form__field--right {
       float: right;
       width: 70%;
+      position: relative;
+      .chat-group-form__search{
+        @include clearfix();
+        position: absolute;
+        top: 11px;
+        input[type="checkbox"]{
+          margin-left: 10px;
+        }
+      }
+      .chat-group-user{
+        @include clearfix();
+        border-bottom: 1px solid #ddd;
+      }
     }
 
     .group-form__label {
