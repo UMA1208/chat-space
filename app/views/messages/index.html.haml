@@ -1,6 +1,6 @@
 
-.chat
-  .sidebar
+.chat.row
+  .sidebar.col-xs-4.col-sm-2
     .sidebar__user
       .sidebar__user--name
         = current_user.name
@@ -11,7 +11,7 @@
           %i.fa.fa-cog.fa-lx 
     .sidebar__groups-list
       = render partial: "groups/group", collection: @groups
-  .chat-main
+  .chat-main.col-xs-8.col-sm-10
     .chat-main__header
       .chat-main__header__left
         .chat-main__header__left--group 
@@ -28,14 +28,14 @@
         = render partial: "message", collection: @messages
 
     .chat-main__footer
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], class: 'js_send' do |f|
         .chat-main__footer--form
-          = f.text_field :body, row: '1', placeholder: "type a message", class: 'send_form'
+          = f.text_field :body, row: '1', placeholder: "type a message", class: 'js_send_form'
           = f.label :image, class: 'image' do
             %i.fa.fa-picture-o
             = f.file_field :image, style: 'display: none;'
         .chat-main__footer--btn
-          = f.submit 'Send', class: 'send_btn'
+          = f.submit 'Send', class: 'submit'
 
 
 
